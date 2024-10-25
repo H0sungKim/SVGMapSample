@@ -23,7 +23,7 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" alwaysBounceHorizontal="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" maximumZoomScale="10" translatesAutoresizingMaskIntoConstraints="NO" id="0ba-SP-oRZ">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sug-QZ-dNT">
+                                    <view contentMode="scaleToFill" restorationIdentifier="ScrollBlankView" translatesAutoresizingMaskIntoConstraints="NO" id="Sug-QZ-dNT" customClass="ScrollBlankView" customModule="SVGMapSample" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                                     </view>
                                 </subviews>

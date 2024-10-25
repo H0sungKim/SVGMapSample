@@ -9,12 +9,13 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    @IBOutlet weak var scrollBlankView: UIView!
+    @IBOutlet weak var scrollBlankView: ScrollBlankView!
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var mapView: MapView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        scrollBlankView.belowView = mapView
         scrollView.delegate = self
         mapView.transformMap(origin: scrollView.contentOffset, size: scrollView.contentSize)
     }

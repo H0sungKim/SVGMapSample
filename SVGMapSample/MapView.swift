@@ -14,8 +14,19 @@ class MapView: MacawView {
     
     required init?(coder aDecoder: NSCoder) {
         let svg = try! SVGParser.parse(resource: "korea")
+        
         map = Group(contents: [svg], place: .identity)
         super.init(node: map, coder: aDecoder)
+        
+        for southKoreaProvince in SouthKoreaProvinceEnum.allCases {
+            map.nodeBy(tag: String(southKoreaProvince.id))?.onTouchPressed({ touch in
+                print(southKoreaProvince.title)
+            })
+            
+            if let mapShape = map.nodeBy(tag: String(southKoreaProvince.id)) as? Shape {
+                mapShape.fill = Color.gray
+            }
+        }
     }
     
     func transformMap(origin: CGPoint, size: CGSize) {
