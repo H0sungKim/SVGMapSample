@@ -10,13 +10,19 @@ import Macaw
 
 class MapView: MacawView {
     
-    private var map: Group
+    public var map: Group
     
     required init?(coder aDecoder: NSCoder) {
-        let svg = try! SVGParser.parse(resource: "korea")
-        
-        map = Group(contents: [svg], place: .identity)
+        map = Group()
         super.init(node: map, coder: aDecoder)
+    }
+    
+    override func layoutSubviews() {
+        let svg = try! SVGParser.parse(resource: "korea")
+        let rate = min(frame.width/svg.bounds!.w, frame.height/svg.bounds!.h)
+        svg.place = .identity.scale(rate, rate).move(frame.width - (svg.bounds!.w * rate), frame.height - (svg.bounds!.h * rate))
+        map = Group(contents: [svg], place: .identity)
+        self.node = map
         
         for southKoreaProvince in SouthKoreaProvinceEnum.allCases {
             map.nodeBy(tag: String(southKoreaProvince.id))?.onTouchPressed({ touch in
@@ -29,7 +35,7 @@ class MapView: MacawView {
         }
     }
     
-    func transformMap(origin: CGPoint, size: CGSize) {
-        map.place = Transform().move(-origin.x, -origin.y).scale(min(size.width/map.bounds!.w, size.height/map.bounds!.h), min(size.width/map.bounds!.w, size.height/map.bounds!.h))
+    func transformMap(origin: CGPoint, scale: CGFloat) {
+        map.place = Transform().move(-origin.x, -origin.y).scale(scale, scale)
     }
 }

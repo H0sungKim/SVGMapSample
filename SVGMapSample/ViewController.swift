@@ -17,18 +17,23 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         scrollBlankView.belowView = mapView
         scrollView.delegate = self
-        mapView.transformMap(origin: scrollView.contentOffset, size: scrollView.contentSize)
+//        mapView.contentMode = .scaleAspectFit
     }
 }
 
 extension ViewController: UIScrollViewDelegate {
     func viewForZooming(in scrollView: UIScrollView) -> UIView? {
-        print("Move")
-        mapView.transformMap(origin: scrollView.contentOffset, size: scrollView.contentSize)
         return scrollBlankView
     }
     func scrollViewDidZoom(_ scrollView: UIScrollView) {
         print("Zoom")
-        mapView.transformMap(origin: scrollView.contentOffset, size: scrollView.contentSize)
+//        print(scrollView.contentSize)
+//        print(scrollView.zoomScale)
+        
+        mapView.transformMap(origin: scrollView.contentOffset, scale: scrollView.zoomScale)
+    }
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        print("Scroll")
+        mapView.transformMap(origin: scrollView.contentOffset, scale: scrollView.zoomScale)
     }
 }

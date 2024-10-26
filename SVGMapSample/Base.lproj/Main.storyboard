@@ -17,14 +17,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JLs-bu-asb" customClass="MapView" customModule="SVGMapSample" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <color key="backgroundColor" systemColor="systemPurpleColor"/>
                             </view>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" alwaysBounceHorizontal="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" maximumZoomScale="10" translatesAutoresizingMaskIntoConstraints="NO" id="0ba-SP-oRZ">
-                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" restorationIdentifier="ScrollBlankView" translatesAutoresizingMaskIntoConstraints="NO" id="Sug-QZ-dNT" customClass="ScrollBlankView" customModule="SVGMapSample" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="759"/>
                                     </view>
                                 </subviews>
                                 <constraints>
@@ -43,13 +43,13 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="0ba-SP-oRZ" secondAttribute="trailing" id="7wo-m6-b8Y"/>
-                            <constraint firstItem="JLs-bu-asb" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="AyO-ty-vnV"/>
+                            <constraint firstItem="JLs-bu-asb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="AyO-ty-vnV"/>
                             <constraint firstAttribute="trailing" secondItem="JLs-bu-asb" secondAttribute="trailing" id="FTi-Bc-Zc5"/>
                             <constraint firstItem="JLs-bu-asb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Fz6-Ua-drn"/>
-                            <constraint firstAttribute="bottom" secondItem="JLs-bu-asb" secondAttribute="bottom" id="XfS-nt-bo6"/>
-                            <constraint firstAttribute="bottom" secondItem="0ba-SP-oRZ" secondAttribute="bottom" id="dWi-gJ-Xsx"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="JLs-bu-asb" secondAttribute="bottom" id="XfS-nt-bo6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="0ba-SP-oRZ" secondAttribute="bottom" id="dWi-gJ-Xsx"/>
                             <constraint firstItem="0ba-SP-oRZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="eYy-Kz-goH"/>
-                            <constraint firstItem="0ba-SP-oRZ" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="ym0-j7-bEx"/>
+                            <constraint firstItem="0ba-SP-oRZ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="ym0-j7-bEx"/>
                         </constraints>
                     </view>
                     <connections>
@@ -66,6 +66,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemPurpleColor">
+            <color red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
