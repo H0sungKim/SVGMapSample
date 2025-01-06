@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		96C0F8472D00815C00A9DC21 /* Macaw in Frameworks */ = {isa = PBXBuildFile; productRef = 96C0F8462D00815C00A9DC21 /* Macaw */; };
 		96C0F84A2D0082BC00A9DC21 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 96C0F8492D0082BC00A9DC21 /* SnapKit */; };
+		96D781372D2BDACF0072CC49 /* Macaw in Frameworks */ = {isa = PBXBuildFile; productRef = 96D781362D2BDACF0072CC49 /* Macaw */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96D781372D2BDACF0072CC49 /* Macaw in Frameworks */,
 				96C0F8472D00815C00A9DC21 /* Macaw in Frameworks */,
 				96C0F84A2D0082BC00A9DC21 /* SnapKit in Frameworks */,
 			);
@@ -87,6 +89,7 @@
 			packageProductDependencies = (
 				96C0F8462D00815C00A9DC21 /* Macaw */,
 				96C0F8492D0082BC00A9DC21 /* SnapKit */,
+				96D781362D2BDACF0072CC49 /* Macaw */,
 			);
 			productName = SVGMapSample;
 			productReference = 96C0F30F2D00801200A9DC21 /* SVGMapSample.app */;
@@ -117,8 +120,8 @@
 			mainGroup = 96C0F3062D00801200A9DC21;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				96C0F8452D00815C00A9DC21 /* XCLocalSwiftPackageReference "Macaw" */,
 				96C0F8482D0082BC00A9DC21 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				96D781352D2BDACF0072CC49 /* XCRemoteSwiftPackageReference "Macaw" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 96C0F3102D00801200A9DC21 /* Products */;
@@ -349,13 +352,6 @@
 		};
 /* End XCConfigurationList section */
 
-/* Begin XCLocalSwiftPackageReference section */
-		96C0F8452D00815C00A9DC21 /* XCLocalSwiftPackageReference "Macaw" */ = {
-			isa = XCLocalSwiftPackageReference;
-			relativePath = Macaw;
-		};
-/* End XCLocalSwiftPackageReference section */
-
 /* Begin XCRemoteSwiftPackageReference section */
 		96C0F8482D0082BC00A9DC21 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
@@ -363,6 +359,14 @@
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 5.7.1;
+			};
+		};
+		96D781352D2BDACF0072CC49 /* XCRemoteSwiftPackageReference "Macaw" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/H0sungKim/Macaw";
+			requirement = {
+				branch = master;
+				kind = branch;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
@@ -376,6 +380,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 96C0F8482D0082BC00A9DC21 /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
+		};
+		96D781362D2BDACF0072CC49 /* Macaw */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 96D781352D2BDACF0072CC49 /* XCRemoteSwiftPackageReference "Macaw" */;
+			productName = Macaw;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
